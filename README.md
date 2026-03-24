@@ -31,3 +31,16 @@ Employees with high performance scores but below-average pay (flight risk)
 - **GROUP BY + HAVING:** To filter aggregated data like review dates and headcounts.
 - **Data Definition (DDL):** Using `ALTER TABLE` to manage constraints and `Views` for reporting.
 
+
+
+## How to Run
+To recreate this database on your local machine:
+
+1. **Install PostgreSQL**: Ensure you have [PostgreSQL](https://www.postgresql.org) and **pgAdmin 4** installed.
+2. **Create Database**: Open pgAdmin, right-click 'Databases' > **Create** > **Database...** and name it `northbridge_hr`.
+3. **Import Schema**: 
+   - Open the **Query Tool** for your new database.
+   - Copy the contents of the `schema.sql` file from this repository.
+   - Press **F5** to execute and create the 7 tables.
+4. **Import Data**: Repeat the process with the `data_insertion.sql` file to populate the tables with sample records.
+5. **Run Analysis**: You can now run any of the queries found in the `analysis_queries.sql` folder!
