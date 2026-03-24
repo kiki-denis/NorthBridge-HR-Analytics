@@ -7,7 +7,7 @@ This project models a comprehensive HR management system for NorthBridge, design
 driven insights into workforce tenure, salary equity, and departmental performance.
 
 ## Schema Diagram
-![Schema Diagram](path/to/your/screenshot.png) C:\Users\HP\Downloads\table schema.pgerd
+C:\Users\HP\Downloads\table schema.pgerd
 *Note: This database consists of 7 tables (Employees, Departments, Salaries, Performance_Reviews, Training, Turnover, and Job_History) linked via Foreign Key relationships.*
 
 ## Business Questions Answered
