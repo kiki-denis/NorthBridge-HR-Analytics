@@ -1,6 +1,14 @@
 -- Run this in pgAdmin Query Tool
-CREATE DATABASE northbridge_hr;
+--CREATE DATABASE called northbridge_hr
 -- Then connect to it before running anything else
+
+DROP TABLE IF EXISTS departments CASCADE;
+DROP TABLE IF EXISTS employees CASCADE;
+DROP TABLE IF EXISTS salaries CASCADE;
+DROP TABLE IF EXISTS performance_reviews CASCADE;
+DROP TABLE IF EXISTS training CASCADE;
+DROP TABLE IF EXISTS job_history CASCADE;
+DROP TABLE IF EXISTS turnover CASCADE;
 
 CREATE TABLE departments (
     dept_id       SERIAL PRIMARY KEY,
