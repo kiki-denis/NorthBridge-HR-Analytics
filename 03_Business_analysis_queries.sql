@@ -1,5 +1,28 @@
 --BUSINESS QUESTIONS
+--VIEW DEPT VS SALARY
+CREATE  VIEW view_dept_salary_summary AS 
 
+SELECT * FROM  view_dept_salary_summary
+    d.dept_name,
+    ROUND(AVG(s.gross_salary), 2)  AS avg_salary
+FROM departments  d
+JOIN  employees e ON e.dept_id = d.dept_id
+JOIN salaries     s  ON e.employee_id = s.employee_id
+WHERE e.status ILIKE 'active'
+GROUP BY  d.dept_name, s.gross_salary
+
+--VIEW DEPT VS EMP_NAME VS SALARY
+CREATE  VIEW  v_name_dept_salary_summary AS 
+SELECT
+    d.dept_name, e.employee_id,
+	e.first_name || ' ' || e.last_name  AS  Name,
+    ROUND(AVG(s.gross_salary), 2)  AS avg_salary
+FROM departments  d
+JOIN  employees e ON e.dept_id = d.dept_id
+JOIN salaries     s  ON e.employee_id = s.employee_id
+WHERE e.status ILIKE 'active'
+GROUP BY  d.dept_name, e.employee_id, e.first_name || ' ' || e.last_name
+	
 --##HEADCOUNT AND STRUCTURE
 
 --How many active employees does each department have?
